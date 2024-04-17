@@ -12,9 +12,9 @@ bp = Blueprint('auth', __name__, url_prefix='/auth')
 @bp.route('/register', methods=('GET', 'POST'))
 def register():
     if request.method == 'POST':
-        username, email = request.form['Usuario']
-        password = request.form['Contraseña']
-        veri_password = request.form['Verificar contraseña']
+        username, email = request.form['Username']
+        password = request.form['password']
+        veri_password = request.form['password 2']
         
         db = get_db()
         error = None
